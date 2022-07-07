@@ -4,7 +4,7 @@
   "description": "This Project explains all Node JS examples",
   "main": "app.js",
   "publishConfig": {
-    "registry": "http://172.31.25.187:8081/repository/lexus-npm/"
+    "registry": "http://34.226.211.169:8081/repository/lexus-npm/"
   },
   "scripts": {
     "server": "http-server -c-1 -p 9999",
