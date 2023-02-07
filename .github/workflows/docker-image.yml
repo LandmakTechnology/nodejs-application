@@ -21,7 +21,10 @@ jobs:
       run:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build . -f Dockerfile -t  nodejs-application
+      run: docker build . -f Dockerfile -t  nodejs:1
+      
+    - name: Docker tag
+      run: docker tag nodejs:1 mysteek/nodejs-application:1
       
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/mysteek/nodejs-application
+      run: docker push ${{secrets.DOCKER_USER}} mysteek/nodejs-application:1
