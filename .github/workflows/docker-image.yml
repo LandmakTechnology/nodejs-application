@@ -21,7 +21,7 @@ jobs:
       run:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag  mysteek/node_js $(date +%s)
+      run: docker build . --f Dockerfile --t  nodejs-app:$(date +%s)
       
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}mysteek/node_js:tagname
+      run: docker push ${{secrets.DOCKER_USER}}/mysteek/node_js:tagname
