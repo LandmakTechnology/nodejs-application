@@ -27,4 +27,4 @@ jobs:
       run: docker tag nodejs:1 mysteek/nodejs-application:1
       
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}} mysteek/nodejs-application:1
+      run: docker push mysteek/nodejs-application:1
